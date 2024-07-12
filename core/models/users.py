@@ -1,5 +1,12 @@
 from core import db
 from core.libs import helpers
+from enum import Enum
+
+
+class RoleEnum(Enum):
+    STUDENT = 'STUDENT'
+    TEACHER = 'TEACHER'
+    PRINCIPAL = 'PRINCIPAL'
 
 
 class User(db.Model):

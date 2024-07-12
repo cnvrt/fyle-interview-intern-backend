@@ -1,0 +1,43 @@
+git clone https://github.com/fylein/fyle-interview-intern-backend.git
+cd fyle-interview-intern-backend
+python3 -m venv venv
+python3.8 -m venv env
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+pip install gunicorn
+
+
+virtualenv env --python=/usr/bin/python3.8      # Make sure python is present in this path 
+source env/bin/activate                         # deactivate
+pip install -r requirements.txt
+export FLASK_APP=core/server.py
+rm core/store.sqlite3
+flask db upgrade -d core/migrations/
+bash run.sh
+pytest -vvv -s tests/
+
+# for test coverage report
+# pytest --cov
+# open htmlcov/index.html
+
+
+
+
+1. Check for Existing Processes on the Port
+
+sudo lsof -i :7755
+netstat -tuln | grep 7755
+
+2. Stop the Conflicting Process
+sudo kill -9 12345<PID>
+
+3. Change the Port Number
+gunicorn --bind 0.0.0.0:8000 your_module:app
+
+
+
+find . -type d \( -name env -o -name venv \) -prune -o -name "*.pyc" -exec rm -rf {} \;
+
+len(sql_result), open('sqlcount_93.txt', 'w').write(str(sql_result))
+
+, open('principal_30.txt', 'w').write(str(response.json))
