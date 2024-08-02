@@ -43,3 +43,4 @@ len(sql_result), open('sqlcount_93.txt', 'w').write(str(sql_result))
 , open('principal_30.txt', 'w').write(str(response.json))
 
 
+
