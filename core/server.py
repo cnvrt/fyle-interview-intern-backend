@@ -17,10 +17,11 @@ app.register_blueprint(principal_assignments_resources, url_prefix='/principal')
 def ready():
     response = jsonify({
         'status': 'ready',
-        'time1': helpers.get_utc_now(),
-        'time2': helpers.utc_format(helpers.TS_TIMEZONE_FORMAT_1),
-        'time3':helpers.utc_format(helpers.TIMESTAMP_WITH_TIMEZONE_FORMAT),
-        'time4': helpers.utc_format(helpers.TS_TIMEZONE_FORMAT_2)
+        'time': helpers.get_utc_now()
+        # ,
+        # 'time2': helpers.utc_format(helpers.TS_TIMEZONE_FORMAT_1),
+        # 'time3':helpers.utc_format(helpers.TIMESTAMP_WITH_TIMEZONE_FORMAT),
+        # 'time4': helpers.utc_format(helpers.TS_TIMEZONE_FORMAT_2)
     })
 
     return response

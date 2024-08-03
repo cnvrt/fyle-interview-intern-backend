@@ -54,7 +54,7 @@ class AssignmentGradeSchema(Schema):
 class UserSchema(Schema):
     class Meta:
         unknown = EXCLUDE
-
+    
     id = fields.Int(dump_only=True)
     user_id = fields.Int(required=True)
     name = fields.Str(required=True)
